@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    /* background-color: navy; */
+}
+/* index.css or App.css */
+
+
+.Nunito-fonts {
+  font-family: "Nunito", sans-serif;
+}
+.hero-image {
+    @apply bg-[url('./assets/hero-pricing-image.png')] bg-contain bg-no-repeat 
+  }
+  .hero-image1 {
+    @apply bg-[url('./assets/Pricingnews.png')] bg-cover bg-no-repeat 
+  }
+  .hero-image2 {
+    @apply bg-[url('./assets/Pricingnews2.png')] bg-cover bg-no-repeat 
+  }
+  .service-image {
+    @apply bg-[url('./assets/services-banner.png')] bg-cover bg-no-repeat 
+  }
+  .clothe-ironing-image {
+    @apply bg-[url('./assets/clothe-ironing.png')] bg-cover bg-no-repeat 
+  }
+  .hovered-date {
+    background-color: #4299e1; /* Your desired color */
+    color: #ffffff; /* Text color */
+  }
+/* ToggleSwitch.css */
+.toggle__line {
+  width: 3rem; /* Adjust the width as needed */
+  height: 1.5rem; /* Adjust the height as needed */
+  background-color: #9ca3af; /* gray-400 */
+  border-radius: 0.75rem; /* Adjust the border-radius as needed */
+}
+
+.toggle__dot {
+  width: 1.25rem; /* Adjust the width as needed */
+  height: 1.25rem; /* Adjust the height as needed */
+  background-color: #ffffff; /* white */
+  border-radius: 50%;
+  box-shadow: 0 0.05rem 0.15rem rgba(0, 0, 0, 0.1); /* shadow-md */
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 0.125rem; /* Adjust the left position as needed */
+  transform: translateY(-50%) translateX(0); /* Center vertically */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+input:checked + .toggle__line {
+  background-color: #10b981; /* green-500 */
+}
+
+input:checked + .toggle__line + .toggle__dot {
+  transform: translateX(100%) translateY(-50%);
+}
+
+.cursor-blink {
+  animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black; /* Change the color as needed */
+  }
+}
+.input-wrap {
+  width: 200px; /* Set the width of the input */
+  overflow-wrap: break-word; /* Allow text to wrap onto the next line */
+}
